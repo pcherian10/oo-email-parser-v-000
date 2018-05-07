@@ -9,12 +9,11 @@ class EmailParser
   def initialize (email_list)
     @emails = []
     @emails << email_list
+    @emails = @emails.flatten
   end
 
-  def parse
-    @emails.split
-
-
+  def self.parse
+    @emails.split(/[" ",]/)
   end
 
 end
