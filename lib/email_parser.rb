@@ -12,7 +12,7 @@ class EmailParser
     @emails = @emails.flatten
   end
 
-  def self.parse
+  def parse
     @emails.split(/[" ",]/)
   end
 
